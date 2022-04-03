@@ -15,11 +15,13 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
-      -run: echo "push"
+      - name: echo
+        run: echo "push"
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
     name: Close Pull Request Job
     steps:
-      -run: echo "pull request"
+      - name: echo
+        run: echo "pull request"
