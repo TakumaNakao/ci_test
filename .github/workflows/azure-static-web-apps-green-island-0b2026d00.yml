@@ -42,10 +42,10 @@ jobs:
       run: |
         dir
         $rootDir = $pwd.Path
-        cd ./Client
-        # Start-Process -NoNewWindow func start --verbose false
-        Start-Process -NoNewWindow func @("start","--verbose","false")
-        Start-Sleep -s 60
+        # cd ./Client
+        # # Start-Process -NoNewWindow func start --verbose false
+        # Start-Process -NoNewWindow func @("start","--verbose","false")
+        # Start-Sleep -s 60
         cd $rootDir/Test
         dotnet test . -c Debug
         cd $rootDir
