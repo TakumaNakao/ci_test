@@ -47,5 +47,5 @@ jobs:
     runs-on: ubuntu-latest
     name: success
     steps:
-    -name: success
+    - name: success
       run: echo "success"
