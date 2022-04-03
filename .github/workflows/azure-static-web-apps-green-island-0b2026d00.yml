@@ -43,8 +43,8 @@ jobs:
         dotnet build
         dotnet test
     -name: success
-      if: job.status == "success"
+      if: gitub.job.status == "success"
       run: echo "success"
     -name: failure
-      if: job.status == "failuer"
+      if: github.job.status == "failuer"
       run: echo "failuer"
