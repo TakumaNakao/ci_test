@@ -12,9 +12,6 @@ on:
 jobs:
   build_and_test:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        dotnet-version: ['5.0', '6.0']
     name: Build and test
 
     steps:
@@ -28,7 +25,8 @@ jobs:
     - name: Setup .NET SDK 6.0 LTS
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: ${{ matrix.dotnet-version }}
+        dotnet-version: '5.0'
+        dotnet-version: '6.0'
 
     - name: Restore NuGet packages
       shell: pwsh
