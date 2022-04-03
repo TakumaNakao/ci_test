@@ -42,3 +42,9 @@ jobs:
         dir
         dotnet build
         dotnet test
+    -name: success
+      if: job.status == "success"
+      run: echo "success"
+    -name: failure
+      if: job.status == "failuer"
+      run: echo "failuer"
