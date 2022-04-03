@@ -32,16 +32,9 @@ jobs:
       run: |
         dir
         dotnet restore .
-    - name: Build solution
+    - name: Build and Test
       shell: pwsh
       run: |
         dir
-        dotnet build . -c Debug -v minimal
-    - name: Test function app (Non-Windows)
-      shell: pwsh
-      run: |
-        dir
-        $rootDir = $pwd.Path
-        cd $rootDir/TestProject1
-        dotnet test . -c Debug
-        cd $rootDir
+        dotnet build
+        dotnet test

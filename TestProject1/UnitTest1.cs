@@ -1,4 +1,5 @@
-[TestClass]
+using NUnit.Framework;
+
 namespace TestProject1
 {
     public class Tests
@@ -8,7 +9,7 @@ namespace TestProject1
         {
         }
 
-        [TestMethod]
+        [Test]
         public void Test1()
         {
             Assert.AreEqual(1,1);
