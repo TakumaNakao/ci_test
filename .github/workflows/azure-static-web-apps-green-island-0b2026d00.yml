@@ -42,9 +42,10 @@ jobs:
         dir
         dotnet build
         dotnet test
+  success_job:
+    needs: build_and_test
+    runs-on: ubuntu-latest
+    name: Build and test
+    steps:
     -name: success
-      if: gitub.job.status == "success"
       run: echo "success"
-    -name: failure
-      if: github.job.status == "failuer"
-      run: echo "failuer"
