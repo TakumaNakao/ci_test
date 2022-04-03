@@ -32,12 +32,12 @@ jobs:
       run: |
         dir
         dotnet restore .
-    - name: Build solution
-      shell: pwsh
-      run: |
-        dir
-        dotnet build . -c Debug -v minimal
-    - name: Test function app (Non-Windows)\
+    # - name: Build solution
+    #   shell: pwsh
+    #   run: |
+    #     dir
+    #     dotnet build . -c Debug -v minimal
+    - name: Test function app (Non-Windows)
       shell: pwsh
       run: |
         dir
