@@ -32,20 +32,16 @@ jobs:
       run: |
         dir
         dotnet restore .
-    # - name: Build solution
-    #   shell: pwsh
-    #   run: |
-    #     dir
-    #     dotnet build . -c Debug -v minimal
+    - name: Build solution
+      shell: pwsh
+      run: |
+        dir
+        dotnet build . -c Debug -v minimal
     - name: Test function app (Non-Windows)
       shell: pwsh
       run: |
         dir
         $rootDir = $pwd.Path
-        # cd ./Client
-        # # Start-Process -NoNewWindow func start --verbose false
-        # Start-Process -NoNewWindow func @("start","--verbose","false")
-        # Start-Sleep -s 60
         cd $rootDir/Test
         dotnet test . -c Debug
         cd $rootDir
