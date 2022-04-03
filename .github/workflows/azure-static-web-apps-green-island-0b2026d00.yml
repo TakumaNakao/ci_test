@@ -45,7 +45,7 @@ jobs:
   success_job:
     needs: build_and_test
     runs-on: ubuntu-latest
-    name: Build and test
+    name: success
     steps:
     -name: success
       run: echo "success"
