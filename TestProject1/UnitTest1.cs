@@ -1,5 +1,4 @@
-using NUnit.Framework;
-
+[TestClass]
 namespace TestProject1
 {
     public class Tests
@@ -9,10 +8,10 @@ namespace TestProject1
         {
         }
 
-        [Test]
+        [TestMethod]
         public void Test1()
         {
-            Assert.Pass();
+            Assert.AreEqual(1,1);
         }
     }
 }
