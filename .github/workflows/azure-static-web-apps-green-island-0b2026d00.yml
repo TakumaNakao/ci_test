@@ -22,10 +22,10 @@ jobs:
       shell: pwsh
       run: |
         npm install -g azure-functions-core-tools@3 --unsafe-perm true
-    - name: Setup .NET SDK 6.0 LTS
+    - name: Setup .NET SDK 5.0 LTS
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '6.0'
+        dotnet-version: '5.0'
 
     - name: Restore NuGet packages
       shell: pwsh
@@ -42,6 +42,6 @@ jobs:
       run: |
         dir
         $rootDir = $pwd.Path
-        cd $rootDir/Test
+        cd $rootDir/TestProject1
         dotnet test . -c Debug
         cd $rootDir
